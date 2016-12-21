@@ -178,7 +178,6 @@ func (conn *ServerConnection) getPacket() (packet PacketReadable, data []byte, e
 	case Handshaking:
 		packetComponent = getPacketByIdHandshaking(int(id))
 	case Status:
-
 		packetComponent = getPacketByIdStatus(int(id))
 	default:
 		err = fmt.Errorf("No protocol state selected!")
